@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+:root {
+  --buttons-hight: 40px;
+}
+
+body {
+  background-color: #029bf9;
+  width: 100vw;
+  position: relative;
+  overflow-x: hidden;
+}
+
+html {
+  width: 100vw;
+}
+
+.navbar {
+  width: 100vw;
+  background-color: grey;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  z-index: 10;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  background: rgba(74, 248, 234, 0.476);
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.8px);
+  -webkit-backdrop-filter: blur(7.8px);
+}
+
+.navbar__menu {
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  color: white;
+}
+
+.menu__item {
+  padding: 10px 40px;
+  border: 2px solid white;
+  margin: 10px;
+  border-radius: 1rem;
+}
+
+.menu__item:hover {
+  background-color: #444646;
+}
+
+.menu__item,
+a {
+  cursor: pointer;
+}
+
+.btn-open-navbar {
+  height: var(--buttons-hight);
+  margin-top: 20px;
+  min-width: 100%;
+  display: block;
+  border: none;
+  position: absolute;
+  z-index: 10;
+  bottom: calc(-1 * var(--buttons-hight));
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+  background: #057fb0;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.8px);
+  -webkit-backdrop-filter: blur(7.8px);
+}
+
+.btn-open-navbar:hover {
+  background: rgba(33, 197, 237, 0.18);
+}
+
+.show-navbar {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+.main-header {
+  -webkit-transform: translateY(-40%);
+          transform: translateY(-40%);
+  height: 110vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.btn-change-section {
+  bottom: 100px;
+  position: fixed;
+  bottom: 20px;
+  z-index: 5;
+  width: 100px;
+}
+
+.btn-prev {
+  left: 100px;
+}
+
+.btn-next {
+  right: 100px;
+}
+
+.section {
+  min-width: 80%;
+  height: 80vh;
+  background-color: wheat;
+  margin-bottom: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section__content {
+  min-width: 90%;
+  height: 80%;
+  background-color: black;
+  opacity: 0.5;
+}
+
+.left {
+  -webkit-transform: translateX(-120%);
+          transform: translateX(-120%);
+}
+
+.right {
+  -webkit-transform: translateX(120%);
+          transform: translateX(120%);
+}
+
+.show-section-content {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  display: block;
+  opacity: 1;
+  background-color: #cd1b1b;
+  -webkit-transition: 0.5s all ease-out;
+  transition: 0.5s all ease-out;
+}
+
+@media screen and (min-width: 600px) {
+  .navbar {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  .btn-open-navbar {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

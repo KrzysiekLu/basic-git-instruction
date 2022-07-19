@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+:root {
+  --buttons-hight: 40px;
+}
+
+body {
+  background-color: #029bf9;
+  width: 100vw;
+  position: relative;
+  overflow-x: hidden;
+}
+
+html {
+  width: 100vw;
+}
+
+.navbar {
+  width: 100vw;
+  background-color: grey;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-100%);
+  z-index: 10;
+  transition: transform 0.2s ease-in-out;
+  background: rgba(74, 248, 234, 0.476);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.8px);
+  -webkit-backdrop-filter: blur(7.8px);
+}
+
+.navbar__menu {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  color: white;
+}
+
+.menu__item {
+  padding: 10px 40px;
+  border: 2px solid white;
+  margin: 10px;
+  border-radius: 1rem;
+  &:hover {
+    background-color: #444646;
+  }
+}
+
+.menu__item,
+a {
+  cursor: pointer;
+}
+.btn-open-navbar {
+  height: var(--buttons-hight);
+  margin-top: 20px;
+  min-width: 100%;
+  display: block;
+  border: none;
+  position: absolute;
+  z-index: 10;
+  bottom: calc(-1 * var(--buttons-hight));
+  transition: 0.2s all ease-in-out;
+  background: rgb(5, 127, 176);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.8px);
+  -webkit-backdrop-filter: blur(7.8px);
+  &:hover {
+    background: rgba(33, 197, 237, 0.18);
+  }
+}
+.show-navbar {
+  transform: translateY(0px);
+}
+
+//Header
+.main-header {
+  transform: translateY(-40%);
+  height: 110vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+// change section btn
+.btn-change-section {
+  bottom: 100px;
+  position: fixed;
+  bottom: 20px;
+  //   left: 50%;
+  z-index: 5;
+  width: 100px;
+}
+.btn-prev {
+  left: 100px;
+}
+.btn-next {
+  right: 100px;
+}
+
+// All sections
+.section {
+  min-width: 80%;
+  height: 80vh;
+  background-color: wheat;
+  margin-bottom: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section__content {
+  min-width: 90%;
+  height: 80%;
+  background-color: black;
+  opacity: 0.5;
+}
+.left {
+  transform: translateX(-120%);
+  //   display: none;
+}
+.right {
+  transform: translateX(120%);
+  //   display: none;
+}
+.show-section-content {
+  transform: translateX(0);
+  display: block;
+  opacity: 1;
+  background-color: rgb(205, 27, 27);
+  transition: 0.5s all ease-out;
+}
+
+// Desctop
+
+@media screen and (min-width: 600px) {
+  .navbar {
+    transform: translate(0);
+  }
+  .btn-open-navbar {
+    display: none;
+  }
+}
