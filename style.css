@@ -109,8 +109,6 @@ a {
 }
 
 .main-header {
-  -webkit-transform: translateY(-40%);
-          transform: translateY(-40%);
   height: 110vh;
   display: -webkit-box;
   display: -ms-flexbox;
