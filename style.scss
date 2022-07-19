@@ -37,6 +37,7 @@ html {
   background: rgba(74, 248, 234, 0.476);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(7.8px);
+
   -webkit-backdrop-filter: blur(7.8px);
 }
 
@@ -50,12 +51,17 @@ html {
 }
 
 .menu__item {
+  text-transform: uppercase;
   padding: 10px 40px;
-  border: 2px solid white;
+  border: 5px solid rgb(206, 242, 239);
   margin: 10px;
   border-radius: 1rem;
+  transition: 0.2s all ease-in-out;
+
   &:hover {
-    background-color: #444646;
+    transition: 0.2s all ease-in-out;
+    background-color: #0f9dd1;
+    transform: translateY(-5px);
   }
 }
 
@@ -87,13 +93,19 @@ a {
 
 //Header
 .main-header {
-  //   transform: translateY(-40%);
   height: 110vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  &__btn-move-down {
+    margin-top: 20px;
+    background: none;
+    border: 5px solid white;
+    padding: 10px 20px;
+    color: white;
+  }
 }
 
 // change section btn
@@ -101,9 +113,11 @@ a {
   bottom: 100px;
   position: fixed;
   bottom: 20px;
-  //   left: 50%;
   z-index: 5;
-  width: 100px;
+  background: none;
+  border: 5px solid white;
+  padding: 10px 20px;
+  color: white;
 }
 .btn-prev {
   left: 100px;
@@ -116,7 +130,7 @@ a {
 .section {
   min-width: 80%;
   height: 80vh;
-  background-color: wheat;
+
   margin-bottom: 300px;
   display: flex;
   align-items: center;
@@ -140,7 +154,7 @@ a {
   transform: translateX(0);
   display: block;
   opacity: 1;
-  background-color: rgb(205, 27, 27);
+  background-color: rgb(6, 89, 89);
   transition: 0.5s all ease-out;
 }
 

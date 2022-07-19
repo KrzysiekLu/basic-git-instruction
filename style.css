@@ -66,14 +66,21 @@ html {
 }
 
 .menu__item {
+  text-transform: uppercase;
   padding: 10px 40px;
-  border: 2px solid white;
+  border: 5px solid #cef2ef;
   margin: 10px;
   border-radius: 1rem;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
 }
 
 .menu__item:hover {
-  background-color: #444646;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+  background-color: #0f9dd1;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
 }
 
 .menu__item,
@@ -126,12 +133,23 @@ a {
   text-align: center;
 }
 
+.main-header__btn-move-down {
+  margin-top: 20px;
+  background: none;
+  border: 5px solid white;
+  padding: 10px 20px;
+  color: white;
+}
+
 .btn-change-section {
   bottom: 100px;
   position: fixed;
   bottom: 20px;
   z-index: 5;
-  width: 100px;
+  background: none;
+  border: 5px solid white;
+  padding: 10px 20px;
+  color: white;
 }
 
 .btn-prev {
@@ -145,7 +163,6 @@ a {
 .section {
   min-width: 80%;
   height: 80vh;
-  background-color: wheat;
   margin-bottom: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -180,7 +197,7 @@ a {
           transform: translateX(0);
   display: block;
   opacity: 1;
-  background-color: #cd1b1b;
+  background-color: #065959;
   -webkit-transition: 0.5s all ease-out;
   transition: 0.5s all ease-out;
 }
